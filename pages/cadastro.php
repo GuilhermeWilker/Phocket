@@ -1,6 +1,6 @@
 <?php
-  include_once 'config/url.php';
-?>
+  include_once '../config/url.php';
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="<?php echo $BASE_URL; ?>/assets/css/style.css"
+      href="<?php echo $BASE_URL; ?>../assets/css/style.css"
     />
 
     <style>
@@ -30,6 +30,10 @@
       <form action="" method="post" class="form_login">
         <h2 class="form_login-title">PHOCKET</h2>
         <div class="form-group">
+          <label for="nome">Username:</label>
+          <input type="texte" name="nome" placeholder="Joab Manoel Gomes" />
+        </div>
+        <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" name="email" placeholder="joabmanoel@email.com" />
         </div>
@@ -37,20 +41,15 @@
           <label for="password">Passoword:</label>
           <input type="password" name="password" placeholder="********" />
         </div>
-        <div class="form-group">
-          <a href="<?php echo $BASE_URL; ?>pages/cadastro.php">
-            Ainda não possui conta? Cadastre-se aqui!
-          </a>
-        </div>
         <button type="submit">Log in</button>
       </form>
 
       <div>
         <h2>Bem-vindo ao PHocket!</h2>
-        <h4>Antes de tudo faça o seu login ao lado</h4>
+        <h4>Antes de tudo faça o seu cadastro ao lado</h4>
 
         <div class="image_container">
-          <img src="<?php echo $BASE_URL; ?>/assets/img/6Yrg.gif" alt="" />
+          <img src="<?php echo $BASE_URL; ?>../assets/img/6Yrg.gif" alt="" />
         </div>
       </div>
     </main>
