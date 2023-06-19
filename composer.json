@@ -1,0 +1,21 @@
+{
+  "name": "guiga/phocket",
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/"
+    }
+  },
+  "scripts": {
+    "server": "php -S localhost:8000 -t public"
+  },
+  "authors": [
+    {
+      "name": "Guilherme Wilker",
+      "email": "wilkerguilherme0@gmail.com"
+    }
+  ],
+  "require": {},
+  "config": {
+    "process-timeout": 0
+  }
+}
