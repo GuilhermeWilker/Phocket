@@ -3,5 +3,4 @@
 session_start();
 
 require '../vendor/autoload.php';
-
-routerExecute();
+require './bootstrap.php';
