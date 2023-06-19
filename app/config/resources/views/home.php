@@ -12,7 +12,7 @@
     <section class="section_form-container">
         
 
-        <form class="form" action="">
+        <form class="form" method="post" action="/login">
             <h2>PHOCKET</h2>
 
             <div class="form-group">

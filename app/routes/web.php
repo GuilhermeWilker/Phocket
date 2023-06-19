@@ -6,5 +6,7 @@ return [
         '/login' => 'LoginController@index',
         ],
 
-    'post' => [],
+    'post' => [
+        '/login' => 'LoginController@store',
+        ],
     ];
