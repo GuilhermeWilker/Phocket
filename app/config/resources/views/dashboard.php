@@ -9,6 +9,7 @@
 </head>
 <body>
     <main class="dashboard">
+        Dashboard
         <article class="navbar"></article>
         <section class="dashboard_area"></section>
     </main>

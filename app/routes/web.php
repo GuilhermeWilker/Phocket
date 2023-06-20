@@ -10,5 +10,6 @@ return [
 
     'post' => [
         '/login' => 'LoginController@store',
+        '/cadastrar' => 'CadastroController@store',
         ],
     ];

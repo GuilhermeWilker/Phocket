@@ -14,8 +14,13 @@
 
    <main>
     <section class="section_form-container">
-        <form class="form" method="post" action="/login">
+        <form class="form" method="post" action="/cadastrar">
             <h2>PHOCKET</h2>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name='username' placeholder="seuemail@gmail.com">
+            </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
