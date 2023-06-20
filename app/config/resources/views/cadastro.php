@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="stylesheet" href="./assets/styles/global.css">
 </head>
-<body> 
+<body>
     <br>
     
     <h4 class='heading'>O melhor lugar para gerenciar sua rentabilidade! 🪙</h4>
@@ -27,8 +27,13 @@
                 <input type="password" name="password" placeholder="*********">
             </div>
 
+            <div class="form-group">
+                <label for="confirm-password">Confirme sua senha:</label>
+                <input type="password" name="confirm-password" placeholder="*********">
+            </div>
+
             <small>
-                <a href="/cadastrar">Ainda não possui conta? Cadastre-se aqui!</a>
+                <a href="/">Já possui conta? Clique aqui!</a>
             </small>
 
             <input type="submit" value="Login" class='button-login'>
@@ -36,11 +41,11 @@
     </section>
 
     <section class="hero">
-        <h3>Bem-vindo ao PHocket!</h3>
-        <p>Antes de tudo faça o seu login ao lado!</p>
+        <h3>Obrigado por escolher <br> o PHocket!</h3>
+        <p>Antes de tudo faça o seu cadastro ao lado!</p>
 
         <div class="img-container">
-            <img src="https://indiefy.net/static/img/landing/pro/money_guy.gif"  alt="Phocket Boy">
+            <img src="https://indiefy.net/static/img/landing/pro/money.gif"  alt="Money Guy">
         </div>
         
     </section>

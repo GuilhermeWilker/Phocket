@@ -4,6 +4,8 @@ return [
     'get' => [
         '/' => 'HomeController@index',
         '/login' => 'LoginController@index',
+        '/cadastrar' => 'CadastroController@index',
+        '/dashboard' => 'DashboardController@index',
         ],
 
     'post' => [
