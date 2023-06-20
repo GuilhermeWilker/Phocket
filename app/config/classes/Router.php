@@ -40,6 +40,12 @@ class Router
         [$controller, $action] = explode('@', $routes[$this->requestMethod][$this->path]);
         $controllerNamespace = "app\\controllers\\{$controller}";
 
+        // definindo regra de autenticação nas rotas
+        if (str_contains($action, ':')) {
+            [$action, $auth] = explode(':', $action);
+            Auth::check($auth);
+        }
+
         $this->controllerWasFound($controllerNamespace, $controller, $action);
 
         $controllerInstance = new $controllerNamespace();
