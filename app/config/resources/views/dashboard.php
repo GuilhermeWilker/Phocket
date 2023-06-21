@@ -1,72 +1,38 @@
 <?php $this->extends('master', ['title' => $title]); ?>
 
 <main class="dashboard flex">
-  <article class="navbar">
-    <div class="navbar__header">
-      <div class="user_info-container">
-        <div class="user_info">
-          <p>Guilherme Wilker</p>
-        </div>
-
-        <div class="user_total-balance rental">
-          <small>Saldo total:</small>
-
-          <div class="flex">
-            <p>R$ 3.000,00</p>
-            <img class="icon" src="/assets/imgs/balance-icon.png" />
-          </div>
-        </div>
-
-        <div class="user_total-income rental">
-          <small>Rentabilidade:</small>
-          <div class="flex">
-            <p>R$ 3.000,00</p>
-            <img class="icon" src="/assets/imgs/growth-icon.png" />
-          </div>
-        </div>
-
-        <div class="user_total-expenses rental">
-          <small>Depesas:</small>
-          <div class="flex">
-            <p>R$ 500,00</p>
-            <img class="icon" src="/assets/imgs/noun-icon.png" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <img
-      class="img_dashboard"
-      src="https://indiefy.net/static/img/landing/pro/money.gif"
-      alt="Money Guy"
-    />
-  </article>
+  <aside class="navbar">
+    <?php require 'partials/navbar.php'; ?> 
+  </aside>
 
   <section class="dashboard_area">
-    <article class="grafico">gráfico</article>
 
+    <article class="grafico">
+      <?php require 'partials/grafico.php'; ?>
+    </article>
+ 
     <article class="actions flex">
       <div class="transaction_box">
         <h4>Registrar nova transação</h4>
 
-        <form action="" method="post">
+        <form action="/transaction" class="form-transaction" method="post">
           <div class="form-transaction-group">
-            <label for="">Digite o valor</label>
+            <label for="price">Digite o valor</label> <br>
             <div class="flex">
-              <input type="text" />
+              <input type="text" name="price" placeholder="R$ 2.500,00"/>
               <img class="icon" src="/assets/imgs/balance-icon.png" />
             </div>
           </div>
 
           <div class="form-transaction-group flex">
-            <label for="">Data</label>
-            <input type="date" />
+            <label for="date">Data</label>
+            <input type="date" name="date" />
           </div>
 
           <div class="form-transaction-group flex">
-            <label for="">Tipo</label>
-            <select name="Tipo" id="">
-              <option value="">De transação</option>
+            <label for="type">Tipo</label>
+            <select name="type" id="">
+              <option value="">Selecione</option>
               <option value="gain">Rentabilidade</option>
               <option value="loss">Despesa</option>
             </select>
@@ -77,7 +43,9 @@
           </div>
         </form>
 
-        <p class="clock">12:05:06</p>
+        <div class="clock">
+          <?php require 'partials/clock.php'; ?>
+        </div>
       </div>
 
       <div class="income_history">
@@ -86,4 +54,4 @@
     </article>
   </section>
 </main>
-
+<script src="/assets/script/clock.js" defer></script>

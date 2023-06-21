@@ -70,6 +70,12 @@ img {
   align-items: center;
 }
 
+.tiny_text {
+  margin-top: auto;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
 @keyframes blink {
   0% {
     color: black;
