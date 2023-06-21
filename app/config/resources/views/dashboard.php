@@ -49,7 +49,8 @@
       </div>
 
       <div class="income_history">
-        <h4>Histórico</h4>
+        <h4>Histórico 📈</h4>
+        <?php require 'partials/historico_transacoes.php'; ?>
       </div>
     </article>
   </section>
