@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use app\config\database\Connection;
+use app\models\TransactionModel;
 
-class TransactionController
+class TransactionModelController
 {
     public function store()
     {
@@ -20,15 +20,7 @@ class TransactionController
             exit;
         }
 
-        $connect = Connection::getConnection();
-
-        $prepare = $connect->prepare(
-            'insert into transactions (price, date, type) values (:price, :date, :type)');
-        $prepare->execute([
-            'price' => $price,
-            'date' => $dateFormatToString,
-            'type' => $type,
-            ]);
+        TransactionModel::createTransaction($price, $dateFormatToString, $type);
 
         return redirect('/dashboard');
     }

@@ -12,11 +12,11 @@
     </article>
  
     <article class="actions flex">
-      <div class="transaction_box">
+      <div class="TransactionModel_box">
         <h4>Registrar nova transação</h4>
 
-        <form action="/transaction" class="form-transaction" method="post">
-          <div class="form-transaction-group">
+        <form action="/TransactionModel" class="form-TransactionModel" method="post">
+          <div class="form-TransactionModel-group">
             <label for="price">Digite o valor</label> <br>
             <div class="flex">
               <input type="text" name="price" placeholder="R$ 2.500,00"/>
@@ -24,12 +24,12 @@
             </div>
           </div>
 
-          <div class="form-transaction-group flex">
+          <div class="form-TransactionModel-group flex">
             <label for="date">Data</label>
             <input type="date" name="date" />
           </div>
 
-          <div class="form-transaction-group flex">
+          <div class="form-TransactionModel-group flex">
             <label for="type">Tipo</label>
             <select name="type" id="">
               <option value="">Selecione</option>
@@ -38,7 +38,7 @@
             </select>
           </div>
 
-          <div class="form-transaction-group flex">
+          <div class="form-TransactionModel-group flex">
             <input type="submit" value="Adicionar" />
           </div>
         </form>

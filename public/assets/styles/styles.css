@@ -179,7 +179,7 @@
   width: 100%;
 }
 
-.transaction_box {
+.TransactionModel_box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,13 +188,13 @@
   gap: 20px;
 }
 
-.transaction_box h4 {
+.TransactionModel_box h4 {
   padding-right: 90px;
   padding-top: 5px;
   font-size: 18px;
 }
 
-.form-transaction {
+.form-TransactionModel {
   padding: 30px;
   width: 300px;
 
@@ -205,7 +205,7 @@
   border-radius: 5px;
 }
 
-.form-transaction-group {
+.form-TransactionModel-group {
   margin: 0 auto;
   max-width: 200px;
 
@@ -213,15 +213,15 @@
   align-items: center;
 }
 
-.form-transaction-group:first-child {
+.form-TransactionModel-group:first-child {
   border-bottom: 1px solid #9f9f9f;
 }
 
-.form-transaction-group label {
+.form-TransactionModel-group label {
   font-size: 16px;
 }
 
-.form-transaction-group input[type="text"] {
+.form-TransactionModel-group input[type="text"] {
   width: 100%;
   border: none;
 
@@ -230,11 +230,11 @@
   outline: none;
 }
 
-.form-transaction-group:nth-child(2) {
+.form-TransactionModel-group:nth-child(2) {
   margin-top: 30px;
 }
 
-.form-transaction-group input[type="date"] {
+.form-TransactionModel-group input[type="date"] {
   padding: 3px;
 
   outline: none;
@@ -244,7 +244,7 @@
   border-bottom: 1px solid #9f9f9f;
 }
 
-.form-transaction-group input[type="submit"] {
+.form-TransactionModel-group input[type="submit"] {
   background: transparent;
   padding: 5px;
 
@@ -255,15 +255,15 @@
   transition: 0.3s ease-in-out;
 }
 
-.form-transaction-group input[type="submit"]:hover {
+.form-TransactionModel-group input[type="submit"]:hover {
   background-color: #f8d556;
 }
 
-.form-transaction-group:nth-child(3) {
+.form-TransactionModel-group:nth-child(3) {
   margin-block: 5px;
 }
 
-.form-transaction-group select {
+.form-TransactionModel-group select {
   padding: 8px;
   width: 115px;
   border: none;
@@ -278,7 +278,7 @@
   cursor: pointer;
 }
 
-.form-transaction-group select:hover {
+.form-TransactionModel-group select:hover {
   background-color: #f8d556;
 }
 
@@ -307,7 +307,7 @@
   font-size: 18px;
 }
 
-.historico-list_transaction {
+.historico-list_TransactionModel {
   max-height: 340px;
   min-height: 340px;
 

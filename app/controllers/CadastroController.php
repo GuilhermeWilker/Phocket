@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use app\config\database\Connection;
+use app\models\AccountModel;
 
 class CadastroController
 {
@@ -23,20 +23,7 @@ class CadastroController
             exit;
         }
 
-        $connect = Connection::getConnection();
-
-        $prepare = $connect->prepare(
-            'INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
-
-        $prepare->execute([
-            'username' => $username,
-            'email' => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
-        ]);
-
-        $prepare->fetchObject();
-
-        // var_dump('Usuário cadastrado com sucesso!');
+        AccountModel::createUser($username, $email, $password);
 
         return redirect('/');
     }

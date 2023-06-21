@@ -2,10 +2,14 @@
 
 namespace app\controllers;
 
+use app\models\TransactionModel as Transactions;
+
 class DashboardController
 {
     public function index()
     {
-        view('dashboard', ['title' => 'Dashboard 🪙']);
+        $transactions = Transactions::getAllTransactions();
+
+        view('dashboard', ['title' => 'Dashboard 🪙', 'transactions' => $transactions]);
     }
 }

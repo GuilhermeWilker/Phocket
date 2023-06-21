@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+  session_start();
 
-require '../vendor/autoload.php';
-require './bootstrap.php';
+  // unset($_SESSION['logged']);
+
+  require '../vendor/autoload.php';
+  require './bootstrap.php';
