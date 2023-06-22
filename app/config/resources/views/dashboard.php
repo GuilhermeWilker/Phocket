@@ -15,7 +15,7 @@
       <div class="TransactionModel_box">
         <h4>Registrar nova transação</h4>
 
-        <form action="/TransactionModel" class="form-TransactionModel" method="post">
+        <form action="/transaction" class="form-TransactionModel" method="post">
           <div class="form-TransactionModel-group">
             <label for="price">Digite o valor</label> <br>
             <div class="flex">
@@ -33,8 +33,8 @@
             <label for="type">Tipo</label>
             <select name="type" id="">
               <option value="">Selecione</option>
-              <option value="gain">Rentabilidade</option>
-              <option value="loss">Despesa</option>
+              <option value="Receita">Rentabilidade</option>
+              <option value="Despesa">Despesa</option>
             </select>
           </div>
 

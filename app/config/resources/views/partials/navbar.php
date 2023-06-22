@@ -13,26 +13,31 @@
                 <small>Saldo total:</small>
 
                 <div class="flex">
-                    <p>R$ 3.000,00</p>
+                    <p>
+                        R$ <?php echo formatCurrency($totalBalance); ?>
+                    </p>
                     <img class="icon" src="/assets/imgs/balance-icon.png" />
                 </div>
             </div>
 
             <div class="user_total-income rental">
                 <small>Rentabilidade:</small>
-                <div class="flex">
-                    <p>R$ 3.000,00</p>
-                    <img class="icon" src="/assets/imgs/growth-icon.png" />
-                </div>
+                    <div class="flex">
+                        <p>
+                            R$ <?php echo formatCurrency($totalIncome); ?>
+                        </p>
+                        <img class="icon" src="/assets/imgs/growth-icon.png" />
+                    </div>
             </div>
 
             <div class="user_total-expenses rental">
                 <small>Depesas:</small>
-                <div class="flex">
-                    <p>R$ 500,00</p>
-                    <img class="icon" src="/assets/imgs/noun-icon.png" />
-                </div>
-                </div>
+                    <div class="flex">
+                        <p>
+                            R$ -<?php echo formatCurrency($totalExpenses); ?>
+                        </p>
+                        <img class="icon" src="/assets/imgs/noun-icon.png" />
+                    </div>
             </div>
         </div>
     </div>

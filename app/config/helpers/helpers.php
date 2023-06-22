@@ -38,3 +38,12 @@ function redirect(string $to)
 {
     return header('Location: '.$to);
 }
+
+function formatCurrency($value, $decimalPlaces = 2)
+{
+    if ($value < 1000) {
+        return number_format($value, $decimalPlaces, ',', '.');
+    }
+
+    return number_format($value, $decimalPlaces, ',', '.');
+}

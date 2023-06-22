@@ -4,14 +4,14 @@ namespace app\controllers;
 
 use app\models\TransactionModel;
 
-class TransactionModelController
+class TransactionController
 {
     public function store()
     {
         $price = strip_tags($_POST['price']);
 
         $date = new \DateTime($_POST['date']);
-        $dateFormatToString = $date->format('Y-m-d');
+        $dateFormatToString = $date->format('Y-m-d H:i:s');
 
         $type = strip_tags($_POST['type']);
 

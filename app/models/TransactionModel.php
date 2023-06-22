@@ -26,9 +26,44 @@ class TransactionModel
     {
         $connect = Connection::getConnection();
 
-        $prepare = $connect->prepare('SELECT price, date, type FROM transactions');
+        $prepare = $connect->prepare(
+            'SELECT price, date, type FROM transactions ORDER BY date  DESC');
         $prepare->execute();
 
-        return $prepare->fetchAll(\PDO::FETCH_ASSOC);
+        $transactions = $prepare->fetchAll(\PDO::FETCH_ASSOC);
+
+        foreach ($transactions as &$transaction) {
+            $dateTime = new \DateTime($transaction['date']);
+            $formattedDate = $dateTime->format('d/m/Y');
+            $transaction['date'] = $formattedDate;
+        }
+
+        return $transactions;
+    }
+
+    public static function getTotalIncome($transactions)
+    {
+        $totalIncome = 0;
+
+        foreach ($transactions as $transaction) {
+            if ($transaction['type'] === 'Receita') {
+                $totalIncome += $transaction['price'];
+            }
+        }
+
+        return $totalIncome;
+    }
+
+    public static function getTotalExpenses($transactions)
+    {
+        $totalExpenses = 0;
+
+        foreach ($transactions as $transaction) {
+            if ($transaction['type'] === 'Despesa') {
+                $totalExpenses += $transaction['price'];
+            }
+        }
+
+        return $totalExpenses;
     }
 }
