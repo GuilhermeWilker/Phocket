@@ -20,7 +20,7 @@ class LoginController
         $userFound = AccountModel::authenticateUser($email, $password);
 
         if (!$userFound) {
-            flash('message', 'Não te encontramos.. ☹️ Por favor faça seu cadastro.');
+            flash('message', 'Email e senha inválidos ☹️');
 
             return redirect('/');
         }

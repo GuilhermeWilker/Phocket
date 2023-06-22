@@ -16,8 +16,7 @@ class TransactionController
         $type = strip_tags($_POST['type']);
 
         if (empty($price) || empty($date) || empty($type)) {
-            var_dump('Preencha todos os campos..');
-            exit;
+            flash('message', 'Por favor preencha todos os campos...');
         }
 
         TransactionModel::createTransaction($price, $dateFormatToString, $type);

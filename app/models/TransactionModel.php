@@ -6,7 +6,7 @@ use app\config\database\Connection;
 
 class TransactionModel
 {
-    public static function createTransaction(float|int $price, string $date, string $type)
+    public static function createTransaction(mixed $price, string $date, string $type)
     {
         $connect = Connection::getConnection();
 

@@ -13,7 +13,7 @@
  
     <article class="actions flex">
       <div class="TransactionModel_box">
-        <h4>Registrar nova transação</h4>
+        <?php echo get('message'); ?>
 
         <form action="/transaction" class="form-TransactionModel" method="post">
           <div class="form-TransactionModel-group">
