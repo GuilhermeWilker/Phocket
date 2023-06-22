@@ -17,6 +17,8 @@ class TransactionController
 
         if (empty($price) || empty($date) || empty($type)) {
             flash('message', 'Por favor preencha todos os campos...');
+
+            return redirect('/dashboard');
         }
 
         TransactionModel::createTransaction($price, $dateFormatToString, $type);

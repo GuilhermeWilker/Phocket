@@ -1,5 +1,4 @@
-<h3>Gráfico</h3>
-
+<br> <br>
 <div class="chart-container">
     <canvas id="chart"></canvas>
 </div>
