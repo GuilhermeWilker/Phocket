@@ -12,15 +12,17 @@ class LoginController
         $password = strip_tags($_POST['password']);
 
         if (empty($email) || empty($password)) {
-            var_dump('Email ou senha inválidos');
-            exit;
+            flash('message', 'Você deve preencher todos os campos');
+
+            return redirect('/');
         }
 
         $userFound = AccountModel::authenticateUser($email, $password);
 
         if (!$userFound) {
-            var_dump('Email ou senha inválidos');
-            exit;
+            flash('message', 'Não te encontramos.. ☹️ Por favor faça seu cadastro.');
+
+            return redirect('/');
         }
 
         $_SESSION['logged'] = true;
@@ -33,7 +35,7 @@ class LoginController
     public function destroy()
     {
         unset($_SESSION['logged']);
-        session_destroy();
+        flash('message', 'Logout feito com sucesso! até a próxima 🤝', 'success');
 
         return redirect('/');
     }

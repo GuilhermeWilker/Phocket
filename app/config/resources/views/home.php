@@ -10,6 +10,7 @@
         <form class="form" method="post" action="/login">
             <h2>PHOCKET</h2>
 
+            <?php echo get('message'); ?>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" name='email' placeholder="seuemail@gmail.com">

@@ -25,6 +25,20 @@ main {
   gap: 180px;
 }
 
+.flash-error {
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(223, 72, 72);
+  color: white;
+}
+
+.flash-success {
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(80, 136, 48);
+  color: white;
+}
+
 .dashboard {
   margin: 5em auto;
 

@@ -10,6 +10,8 @@
         <form class="form" method="post" action="/cadastrar">
             <h2>PHOCKET</h2>
 
+            <?php echo get('message'); ?>
+            
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" name='username' placeholder="seuemail@gmail.com">

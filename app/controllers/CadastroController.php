@@ -18,9 +18,16 @@ class CadastroController
         $password = strip_tags($_POST['password']);
         $confirmpassword = strip_tags($_POST['confirm-password']);
 
+        if (empty($username) || empty($email) || empty($password) || empty($confirmpassword)) {
+            flash('message', 'Você deve preencher todos os campos');
+
+            return redirect('/cadastrar');
+        }
+
         if ($password !== $confirmpassword) {
-            var_dump('As senhas deve se coincidirem!');
-            exit;
+            flash('message', 'As senhas devem coincidirem!');
+
+            return redirect('/cadastrar');
         }
 
         AccountModel::createUser($username, $email, $password);

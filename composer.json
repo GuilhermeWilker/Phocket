@@ -5,7 +5,8 @@
       "app\\": "app/"
     },
     "files": [
-      "app/config/helpers/helpers.php"
+      "app/config/helpers/helpers.php",
+      "app/config/helpers/flashMessage.php"
     ]
   },
   "scripts": {
