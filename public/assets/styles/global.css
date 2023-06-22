@@ -57,6 +57,14 @@ img {
   animation: blink 2s infinite;
 }
 
+.btn_logout {
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  padding: 5px;
+
+  cursor: pointer;
+}
+
 .footer {
   position: fixed;
   width: 100%;

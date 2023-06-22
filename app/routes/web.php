@@ -5,6 +5,7 @@ return [
         '/' => 'HomeController@index',
         '/cadastrar' => 'CadastroController@index',
         '/dashboard' => 'DashboardController@index:auth',
+        '/api/chartdata' => 'DashboardController@chartData:auth',
         ],
 
     'post' => [

@@ -7,6 +7,8 @@
                     </p>
                 <?php } ?>
                 
+                    <button class="btn_logout">Logout</button>
+
             </div>
 
             <div class="user_total-balance rental">

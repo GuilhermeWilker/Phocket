@@ -92,6 +92,10 @@
 }
 
 .user_info-container .user_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
   width: 100%;
   padding: 20px;
 
@@ -324,4 +328,10 @@
 
   border-bottom: 1px solid #9f9f9f;
   padding: 5px 0;
+}
+
+.chart-container {
+  padding: 5px;
+  height: 250px;
+  width: 100%;
 }
