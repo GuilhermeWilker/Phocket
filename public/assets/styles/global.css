@@ -62,7 +62,17 @@ img {
   border: 1px solid #cecece;
   padding: 5px;
 
+  font-size: 14px;
   cursor: pointer;
+  color: black;
+
+  text-decoration: none;
+  background-color: #cecece;
+  transition: 0.2s ease-in-out;
+}
+
+.btn_logout:hover {
+  background-color: #b3b2b2;
 }
 
 .footer {

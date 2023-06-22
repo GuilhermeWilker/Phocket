@@ -7,7 +7,7 @@
                     </p>
                 <?php } ?>
                 
-                    <button class="btn_logout">Logout</button>
+                    <a href="/logout" class="btn_logout">Logout</a>
 
             </div>
 

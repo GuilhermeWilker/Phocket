@@ -29,4 +29,12 @@ class LoginController
 
         return redirect('/dashboard');
     }
+
+    public function destroy()
+    {
+        session_unset();
+        session_destroy();
+
+        return redirect('/');
+    }
 }
