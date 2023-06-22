@@ -32,7 +32,7 @@ class LoginController
 
     public function destroy()
     {
-        session_unset();
+        unset($_SESSION['logged']);
         session_destroy();
 
         return redirect('/');

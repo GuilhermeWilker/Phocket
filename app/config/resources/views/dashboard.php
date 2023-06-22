@@ -56,3 +56,5 @@
   </section>
 </main>
 <script src="/assets/script/clock.js" defer></script>
+
+    <script src="./assets/script/grafico.js" defer></script>
