@@ -1,7 +1,5 @@
 # Phocket
 
----
-
 **Phocket** é uma carteira virtual para monitoramento de rentabilidade e despesas.
 Ajudando os usuários a terem controle sobre suas finanças 🪙
 
