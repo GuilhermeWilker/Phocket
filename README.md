@@ -1,7 +1,7 @@
 # Phocket
 
-<p>**Phocket** é uma carteira virtual para monitoramento de rentabilidade e despesas.</p>
-<p>Ajudando os usuários a terem controle sobre suas finanças 🪙 </p>
+**Phocket** é uma carteira virtual para monitoramento de rentabilidade e despesas. <br>
+Ajudando os usuários a terem controle sobre suas finanças 🪙
 
 **_Dashboard_**
 ![Dashboard](/public/assets/imgs/readme/phocket_dashboard.png "Dashboard")
