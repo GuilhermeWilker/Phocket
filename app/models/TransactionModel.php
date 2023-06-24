@@ -6,29 +6,32 @@ use app\config\database\Connection;
 
 class TransactionModel
 {
-    public static function createTransaction(mixed $price, string $date, string $type)
+    public static function createTransaction(mixed $price, string $date, string $type, int $userId)
     {
         $connect = Connection::getConnection();
 
         $prepare = $connect->prepare(
-            'insert into transactions (price, date, type) values (:price, :date, :type)');
+            'INSERT INTO transactions (user_id, price, date, type) VALUES (:userId, :price, :date, :type)');
 
         $prepare->execute([
+            'userId' => $userId,
             'price' => $price,
             'date' => $date,
             'type' => $type,
-            ]);
+        ]);
 
         return $connect->lastInsertId();
     }
 
-    public static function getAllTransactions()
+    public static function getUserTransactions(int $userId)
     {
         $connect = Connection::getConnection();
 
         $prepare = $connect->prepare(
-            'SELECT price, date, type FROM transactions ORDER BY date  DESC');
-        $prepare->execute();
+            'SELECT t.price, t.date, t.type, u.username FROM transactions t JOIN users u ON t.user_id = u.id WHERE t.user_id = :userId ORDER BY t.date DESC');
+        $prepare->execute([
+            'userId' => $userId,
+        ]);
 
         $transactions = $prepare->fetchAll(\PDO::FETCH_ASSOC);
 

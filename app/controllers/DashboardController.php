@@ -8,22 +8,24 @@ class DashboardController
 {
     public function index()
     {
-        $transactions = Transactions::getAllTransactions();
+        $userId = $_SESSION['user']->id;
+        $transactions = Transactions::getUserTransactions($userId);
         $totalExpenses = Transactions::getTotalExpenses($transactions);
         $totalIncome = Transactions::getTotalIncome($transactions);
 
         view('dashboard', [
-        'title' => 'Dashboard 🪙',
-        'transactions' => $transactions,
-        'totalExpenses' => $totalExpenses,
-        'totalIncome' => $totalIncome,
-        'totalBalance' => $totalIncome - $totalExpenses,
-    ]);
+            'title' => 'Dashboard 🪙',
+            'transactions' => $transactions,
+            'totalExpenses' => $totalExpenses,
+            'totalIncome' => $totalIncome,
+            'totalBalance' => $totalIncome - $totalExpenses,
+        ]);
     }
 
     public function chartData()
     {
-        $transactions = Transactions::getAllTransactions();
+        $userId = $_SESSION['user']->id;
+        $transactions = Transactions::getUserTransactions($userId);
 
         $rentabilidadeData = [];
         $despesasData = [];

@@ -32,7 +32,7 @@ class CadastroController
 
         AccountModel::createUser($username, $email, $password);
 
-        flash('message', 'Cadastro feito com sucesso! faça o login abaixo.');
+        flash('message', 'Cadastro feito com sucesso! faça o login abaixo..', 'success');
 
         return redirect('/');
     }

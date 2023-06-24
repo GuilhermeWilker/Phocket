@@ -28,6 +28,7 @@ class LoginController
         $_SESSION['logged'] = true;
         unset($userFound->password);
         $_SESSION['user'] = $userFound;
+        $_SESSION['user_id'] = $userFound->id; // Definir o ID do usuário na sessão
 
         return redirect('/dashboard');
     }

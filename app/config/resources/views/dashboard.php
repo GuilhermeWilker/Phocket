@@ -19,19 +19,19 @@
           <div class="form-TransactionModel-group">
             <label for="price">Digite o valor</label> <br>
             <div class="flex">
-              <input type="text" name="price" placeholder="R$ 2.500,00"/>
+              <input type="text" name="price" placeholder="R$ 2.500,00" required/>
               <img class="icon" src="/assets/imgs/balance-icon.png" />
             </div>
           </div>
 
           <div class="form-TransactionModel-group flex">
             <label for="date">Data</label>
-            <input type="date" name="date" />
+            <input type="date" name="date" required/>
           </div>
 
           <div class="form-TransactionModel-group flex">
             <label for="type">Tipo</label>
-            <select name="type" id="">
+            <select name="type" id="" required>
               <option value="">Selecione</option>
               <option value="Receita">Rentabilidade</option>
               <option value="Despesa">Despesa</option>
