@@ -75,20 +75,38 @@
 }
 
 .user_info-container {
-  border: 1px solid #000;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  gap: 60px;
   width: 320px;
 }
 
 .user_info-container .rental {
-  width: 100%;
+  width: 195px;
+  height: 130px;
   padding: 12px;
 
-  border-top: 1px solid #000;
+  border-radius: 3px;
+  border: 1px solid #000;
+  background: #fff;
+  box-shadow: -4px 4px 0px 0px #000;
+}
+
+.user_info-container .rental .img_rental {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 61px;
+  height: 25px;
+  padding: 15px;
+
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
 }
 
 .user_info-container .user_info {
@@ -97,22 +115,21 @@
   justify-content: space-around;
 
   width: 100%;
-  padding: 20px;
+  height: 130px;
+  padding: 12px;
 
   color: white;
-  font-weight: 400;
+  border: 1px solid #000;
+  background: #fff;
+  box-shadow: -3px 3px 0px 0px #000;
   font-size: 25px;
 
   text-align: center;
-  background-color: #242424;
-}
-
-.user_total-balance .flex {
-  justify-content: space-between;
+  background-color: #17161d;
 }
 
 .user_info-container .user_total-balance {
-  background-color: #f3d7ce;
+  background-color: #e6f3ce;
 }
 
 .user_info-container .user_total-balance small {
@@ -120,12 +137,8 @@
 }
 
 .user_info-container .user_total-balance p {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
-}
-
-.user_total-income .flex {
-  justify-content: space-between;
 }
 
 .user_info-container .user_total-income {
@@ -137,16 +150,12 @@
 }
 
 .user_info-container .user_total-income p {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
 }
 
-.user_total-expenses .flex {
-  justify-content: space-between;
-}
-
 .user_info-container .user_total-expenses {
-  background-color: #e1e0e5;
+  background-color: #a99cdb;
 }
 
 .user_info-container .user_total-expenses small {
@@ -154,7 +163,7 @@
 }
 
 .user_info-container .user_total-expenses p {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
 }
 

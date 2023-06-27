@@ -12,40 +12,42 @@
             </div>
 
             <div class="user_total-balance rental">
+                <div class="img_rental">
+                    <img class="icon" src="/assets/imgs/balance-icon.png" />
+                </div>  
                 <small>Saldo total:</small>
 
-                <div class="flex">
                     <p>
                         R$ <?php echo formatCurrency($totalBalance); ?>
                     </p>
-                    <img class="icon" src="/assets/imgs/balance-icon.png" />
-                </div>
             </div>
 
             <div class="user_total-income rental">
+                <div class="img_rental">
+                    <img class="icon" src="/assets/imgs/growth-icon.png" />
+                </div>               
                 <small>Rentabilidade:</small>
-                    <div class="flex">
-                        <p>
-                            R$ <?php echo formatCurrency($totalIncome); ?>
-                        </p>
-                        <img class="icon" src="/assets/imgs/growth-icon.png" />
-                    </div>
+               
+                    <p>
+                        R$ <?php echo formatCurrency($totalIncome); ?>
+                    </p>
             </div>
 
             <div class="user_total-expenses rental">
+                <div class="img_rental">
+                    <img class="icon" src="/assets/imgs/noun-icon.png" />
+                </div>
                 <small>Depesas:</small>
-                    <div class="flex">
-                        <p>
-                            R$ -<?php echo formatCurrency($totalExpenses); ?>
-                        </p>
-                        <img class="icon" src="/assets/imgs/noun-icon.png" />
-                    </div>
+          
+                    <p>
+                        R$ -<?php echo formatCurrency($totalExpenses); ?>
+                    </p>                 
             </div>
         </div>
     </div>
 
-    <img class="img_dashboard"
+    <!-- <img class="img_dashboard"
       src="https://indiefy.net/static/img/landing/pro/money.gif"
       alt="Money Guy"
-    />
+    /> -->
 </div>
